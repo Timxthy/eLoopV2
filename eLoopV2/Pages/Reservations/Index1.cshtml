@@ -1,0 +1,37 @@
+﻿@page
+@model eLoopV2.Pages.Reservations.Index1Model
+@{
+}
+<div>
+    <h1>Make a Reservation</h1>
+    <form>
+        <div class="form-group">
+            <label for="car">Select Car:</label>
+            <select id="car" name="car" class="form-control">
+                <option value="">-- Select Car --</option>
+                <option value="1">Tesla Model S</option>
+                <option value="2">Chevy Bolt</option>
+                <option value="3">Nissan Leaf</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="returnDate">Return Date:</label>
+            <input type="date" id="returnDate" name="returnDate" class="form-control" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit Reservation</button>
+        </div>
+    </form>
+</div>

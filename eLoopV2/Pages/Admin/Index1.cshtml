@@ -1,0 +1,38 @@
+﻿@page
+@model eLoopV2.Pages.Admin.Index1Model
+@{
+}
+
+
+<h1>Admin Dashboard</h1>
+
+<h2>Electric Cars</h2>
+<p>Number of Available Cars: </p>
+<p>Number of Leased Cars: t</p>
+
+<h2>Reservations</h2>
+<p>Pending Approvals: t</p>
+<p>Approved Reservations: </p>
+<p>Rejected Reservations: </p>
+
+<h2>Reports</h2>
+<div>
+    <form method="post">
+        <label for="reportType">Report Type:</label>
+        <select id="reportType" name="ReportType">
+            <option value="Cars">Electric Cars</option>
+            <option value="Reservations">Reservations</option>
+            <option value="Leases">Leases</option>
+        </select>
+        <br />
+        <label for="dateRange">Date Range:</label>
+        <select id="dateRange" name="DateRange">
+            <option value="LastWeek">Last Week</option>
+            <option value="LastMonth">Last Month</option>
+            <option value="LastQuarter">Last Quarter</option>
+            <option value="LastYear">Last Year</option>
+        </select>
+        <br />
+        <button type="submit">Generate Report</button>
+    </form>
+</div>

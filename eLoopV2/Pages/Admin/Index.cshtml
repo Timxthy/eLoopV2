@@ -1,0 +1,50 @@
+﻿@page
+@model eLoopV2.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Welcome to the admin dashboard! From here, you can manage all the electric cars in the system.</p>
+
+<a asp-page="/Admin/CreateElectricCar" class="btn btn-primary">Add Electric Car</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Color</th>
+            <th>VIN</th>
+            <th>Battery Capacity</th>
+            <th>Charging Time</th>
+            <th>Plate Number</th>
+            <th>Location</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var car in Model.ElectricCars)
+        {
+                <tr>
+                    <td>@car.ID</td>
+                    <td>@car.Make</td>
+                    <td>@car.Model</td>
+                    <td>@car.Year</td>
+                    <td>@car.Color</td>
+                    <td>@car.VIN</td>
+                    <td>@car.BatteryCapacity kWh</td>
+                    <td>@car.ChargingTime hours</td>
+                    <td>@car.PlateNumber</td>
+                    <td>@car.Location.City</td>
+                    <td>
+                        <a asp-page="/Admin/EditElectricCar" asp-route-id="@car.ID" class="btn btn-primary">Edit</a>
+                        <a asp-page="/Admin/DeleteElectricCar" asp-route-id="@car.ID" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

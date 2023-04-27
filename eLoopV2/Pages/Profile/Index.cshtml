@@ -1,0 +1,39 @@
+﻿@page
+@model eLoopV2.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4>Personal Information</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">First Name</dt>
+            <dd class="col-sm-9">@Model.User.FirstName</dd>
+
+            <dt class="col-sm-3">Last Name</dt>
+            <dd class="col-sm-9">@Model.User.LastName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.User.Email</dd>
+
+            <dt class="col-sm-3">Address</dt>
+            <dd class="col-sm-9">@Model.User.Address</dd>
+
+            <dt class="col-sm-3">Phone Number</dt>
+            <dd class="col-sm-9">@Model.User.PhoneNumber</dd>
+        </dl>
+
+        <h4>Payment Information</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">Payment Information</dt>
+            <dd class="col-sm-9">@Model.User.PaymentInformation</dd>
+        </dl>
+
+        <a asp-page="EditProfile" class="btn btn-primary">Edit Profile</a>
+    </div>
+</div>
